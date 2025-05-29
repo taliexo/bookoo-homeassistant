@@ -1,14 +1,19 @@
-"""Initialize the Bookoo component."""
+"""The bookoo integration."""
+from __future__ import annotations
 
+from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 
+from .const import DOMAIN
 from .coordinator import BookooConfigEntry, BookooCoordinator
 
 PLATFORMS = [
     Platform.BINARY_SENSOR,
     Platform.BUTTON,
+    Platform.NUMBER,
     Platform.SENSOR,
+    Platform.SWITCH,
 ]
 
 
